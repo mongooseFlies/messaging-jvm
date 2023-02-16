@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: kafka
+  activemq:
+    broker-url: tcp://localhost:61616
+
+kafka:
+  queue:
+    notification:
+      create: create_event_notification
+      delete: delete_event_notification
+      update: update_event_notification
+    request:
+      create: create_event_request
+      delete: delete_event_request
+      update: update_event_request
+  consumer:
+    groupId: event-consumer
+  host: localhost
+  port: 9092
+
+rabbit:
+  queue:
+    notification:
+      create: create_event_notification
+      delete: delete_event_notification
+      update: update_event_notification
+    request:
+      create: create_event_request
+      delete: delete_event_request
+      update: update_event_request
+  host: localhost
+
+activemq:
+  queue:
+    notification:
+      create: create_event_notification
+      delete: delete_event_notification
+      update: update_event_notification
+    request:
+      create: create_event_request
+      delete: delete_event_request
+      update: update_event_request
